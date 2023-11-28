@@ -1,0 +1,49 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--textFont);
+  }
+  .footerBottom{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-block: 2vh;
+    gap:5vw;
+    color:var(--colorWhite);
+    margin-inline: 2vw;
+  }
+  .rulesLinks{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5vw;
+    justify-content:space-evenly;
+  }
+  .footerTop{
+    display: flex;
+    width: 90%;
+    background-color: var(--colorDarkGreen);
+    padding: 3rem 1.5rem;
+    border-radius: calc(var(--borderRadius)*2);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-self: center;
+  }
+  .brandFooter{
+    font-family: var(--textFont);
+    color: var(--colorWhite);
+  }
+  .footerLiItems{
+    display: flex;
+    flex-direction:column;
+    gap:0.5rem;
+    margin-block: 1.3rem;
+    color: var(--colorWhite);
+  }
+  .footerLiItems > *{
+    cursor:pointer;
+  }
+  .footerDet > h3{
+    color: var(--colorWhite);
+  }

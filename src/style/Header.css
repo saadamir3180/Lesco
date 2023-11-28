@@ -1,0 +1,29 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding);
+    font-size: var(--fontSize);
+    color: var(--colorWhite);
+}
+.headerNav{
+    display: flex;
+    gap: 2.5rem;
+    padding: var(--padding);
+}
+.navUl{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: inherit;
+}
+.navUl li{
+    cursor: pointer;
+}
+.navButton{
+    padding: var(--padding);
+    cursor: pointer;
+    border: var(--border);
+    border-radius: var(--borderRadius);
+    background-color: var(--colorWhite);
+}

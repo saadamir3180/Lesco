@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+*{
+  margin: 0;
+  box-sizing: border-box;
+  --fontSize: 1.35rem;
+  --padding:0.5rem 1rem;
+  --borderRadius: 0.5rem;
+  --border:1px solid rgb(0, 36, 0);
+  --colorWhite:#FEFFFE;
+  --colorLightGreen:#8C9970;
+  --colorDarkGreen:#5D665F;
+  --colorLightBlue:#29363D;
+  --colorDarkBlue:#1E262B;
+  --textFont:'Poppins', sans-serif;
+  --designFont:'Philosopher', sans-serif;
+  font-family: var(--textFont);
+}
+body{   
+  background-color: var(--colorDarkBlue);
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: unset;
+}
+button{
+  border: none;
+  outline: none;
+}
