@@ -1,15 +1,23 @@
+import { Link } from 'react-router-dom'
 import '../style/Header.css'
 import Lesco from './Lesco'
 const Header = () => {
   return (
     <header className='header'>
         <Lesco/>
-        <nav className='headerNav'>
+        <nav className='headerNavLargeScreen'>
             <ul className='navUl'>
-                <li>Home</li>
-                <li>About</li>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='AboutUs'>About</Link></li>
+                <li><button className='navButton'><Link to={'/Login'}>Login</Link></button></li>
             </ul>
-            <button className='navButton'>Get Started</button>
+        </nav>
+        <nav className='headerNavSmallScreen'>
+        <ul className='navUl'>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='AboutUs'>About</Link></li>
+                <li><button className='navButton'><Link to={'/Login'}>Login</Link></button></li>
+            </ul>
         </nav>
     </header>
   )

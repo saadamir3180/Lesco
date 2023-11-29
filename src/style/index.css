@@ -16,7 +16,7 @@
   font-family: var(--textFont);
 }
 body{   
-  background-color: var(--colorDarkBlue);
+  background-color: var(--colorDarkGreen);
 }
 ul{
   list-style: none;
@@ -29,3 +29,34 @@ button{
   border: none;
   outline: none;
 }
+@media (max-width: 768px) {
+  html{
+    font-size: 90%;
+  }
+}
+@media (max-width: 650px) {
+  html{
+    font-size: 80%;
+  }
+}
+@media (max-width: 490px) {
+ .headerNavLargeScreen{
+  display: none;
+ }
+ .headerNavSmallScreen{
+  display: flex;
+ }
+}
+@media (max-width: 490px) {
+  .headerNavLargeScreen{
+   display: none;
+  }
+  .headerNavSmallScreen{
+   display: flex;
+  }
+ }
+@media (min-width: 430px) {
+  .headerNavSmallScreen{
+   display: none;
+  }
+ }
