@@ -3,6 +3,7 @@
     flex-direction: column;
     font-family: var(--textFont);
     padding: var(--padding);
+    transition: all 0.3s ease;
   }
   .footerBottom{
     display: flex;

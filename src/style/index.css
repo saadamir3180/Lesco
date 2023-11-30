@@ -18,6 +18,24 @@
 body{   
   background-color: var(--colorDarkGreen);
 }
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+body::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+body::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid var(--colorDarkBlue);
+  background-color: var(--colorLightGreen);
+}
+body::-webkit-scrollbar-track { 
+  background-color:var(--colorDarkBlue); 
+  border-radius: 8px; 
+} 
 ul{
   list-style: none;
 }
