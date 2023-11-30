@@ -19,7 +19,7 @@
     transform: translate(-35%, -25%);
 }
 th{
-    color: var(--colorLightGreen);
+    color: rgb(65, 65, 65);
 }
 .cur{
     cursor: pointer;

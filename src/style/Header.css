@@ -50,9 +50,12 @@
 .navButton{
     padding: 0.2rem;
     cursor: pointer;
+    font-size: calc(var(--fontSize)/1.4);
     border: var(--border);
     color: var(--colorDarkBlue);
     border-radius: var(--borderRadius);
     background-color: var(--colorWhite);
-    transform: translateX(13%);
+}
+.navLink{
+    font-size: calc(var(--fontSize)/1.3);
 }
