@@ -52,6 +52,7 @@
     flex-direction: column;
     align-items: center;
     width: min-content;
+    margin-inline: auto;
 }
 .buttonsContainer{
     display: flex;
@@ -97,10 +98,10 @@
     align-self: center;
 	padding:10px 20px;
 	text-transform:uppercase;
-	border-radius:calc(var(--borderRadius)*4);
+	border-radius: var(--borderRadius);
 	cursor:pointer;
 	position:relative;
-    width: clamp(3rem, 15vw, 30vw);
+    width: clamp(3rem, 27vw, 30vw);
 }
 .input-container input:focus ~ .label-n,
 .input-container input:valid ~ .label-n{
