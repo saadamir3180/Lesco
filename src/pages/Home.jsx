@@ -2,7 +2,7 @@ import '../style/Pages.css'
 
 const Home = () => {
   return (
-    <div className='page'>
+    <div className='page noScroll'>
       Home
     </div>
   )

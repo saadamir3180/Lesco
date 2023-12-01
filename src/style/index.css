@@ -52,29 +52,24 @@ button{
     font-size: 90%;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 690px) {
   html{
     font-size: 80%;
   }
 }
-@media (max-width: 490px) {
+@media (max-width: 460px) {
  .headerNavLargeScreen{
   display: none;
  }
- .headerNavSmallScreen{
+ /* .headerNavSmallScreen{
   display: flex;
- }
+ } */
 }
-@media (max-width: 490px) {
-  .headerNavLargeScreen{
-   display: none;
-  }
-  .headerNavSmallScreen{
-   display: flex;
-  }
- }
-@media (min-width: 430px) {
+@media (min-width: 460px) {
   .headerNavSmallScreen{
    display: none;
   }
  }
+ .noScroll {
+  overflow: hidden;
+}
