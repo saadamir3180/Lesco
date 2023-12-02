@@ -8,19 +8,36 @@
 }
 .Dialog{
     position: absolute;
-    width: 50vw;
-    height: 50vh;
+    margin: -6vh;
+    width: 72vw;
+    height: 99vh;
     background-color: var(--colorLightBlue);
     border-radius: var(--borderRadius);
     display: flex;
     flex-direction:column;
     align-items: center;
-    justify-content: center;
     transform: translate(-35%, -25%);
+
 }
 th{
-    color: rgb(65, 65, 65);
+    color: white;
 }
 .cur{
     cursor: pointer;
 }
+
+
+
+/* DashBoard */
+.DashBoard{
+    background-color: #1e262b !important;
+    border-radius: 30px;
+}
+
+.button {
+    font-size: 14px;
+    border-radius: 6px;
+    color: white;
+    background-color: #1e262b;
+    margin: 5px;
+  }
