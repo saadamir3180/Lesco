@@ -11,7 +11,6 @@ const Dashboard = () => {
     { duration: '08:00 AM - 10:00 AM', area: 'Downtown', date: '2023-12-01' },
     { duration: '01:00 PM - 03:00 PM', area: 'Suburb A', date: '2023-12-02' },
     { duration: '06:00 PM - 08:00 PM', area: 'Suburb B', date: '2023-12-03' },
-    // Add more objects as needed
   ];
 
   const billEntries = [
@@ -32,7 +31,6 @@ const Dashboard = () => {
   const handleChangeStatus = (id) => {
     const updatedEntries = entries.map((entry) => {
       if (entry.id === id) {
-        // Toggle between 'paid' and 'unpaid' status
         entry.status = entry.status === 'paid' ? 'unpaid' : 'paid';
       }
       return entry;
@@ -112,7 +110,6 @@ const Dashboard = () => {
             <p>Account Title: Saad Amir</p>
             <p>Bank Name: Mezzan Bank</p>
             <p>Account Number: 092001079782726</p>
-            {/* Input of type file */}
             <h3>
               <label htmlFor="fileInput">Upload Document:</label>
             </h3>
