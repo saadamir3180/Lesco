@@ -196,7 +196,7 @@ const Dashboard = () => {
           <div className="col-md-3">
             <aside
               id="sidebar-multi-level-sidebar"
-              class=" z-40  h-screen transition-transform -translate-x-full sm:translate-x-0"
+              class=" z-40  h-screen transition-transform -translate-x-0 "
               aria-label="Sidebar"
             >
               <div class=" DashBoard h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">

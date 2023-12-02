@@ -28,6 +28,10 @@ th{
 .DashBoard{
     background-color: #1e262b !important;
     border-radius: 30px;
+    text-align: center;
+    @media (min-width: 640px) { 
+        text-align: left;
+    }
 }
 
 .CustomButton {
