@@ -5,10 +5,11 @@
 }
 
 .Dialog{
-  width: 74vw;
+  max-width: 100vw;
 }
 
 .Dialog table{
+    margin-right: 8px;
     background-color: #1e262b !important;
     border-radius: 30px;
 }
@@ -46,3 +47,5 @@ th{
     text-align: center;
     font-size: 30px;
   }
+
+  
