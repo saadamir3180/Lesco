@@ -1,4 +1,4 @@
-/* 
+/* /* 
 .switch {
 	position: relative;
 	display: inline-block;
@@ -107,21 +107,6 @@ input:checked ~ .slider--3 {
 	transition-delay: 1s;
 	transform: translatex(0);
 } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  .knobs, .layer
