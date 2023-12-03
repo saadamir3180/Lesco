@@ -23,6 +23,7 @@ th{
 
 /* DashBoard */
 .DashBoard{
+    min-height: 100vh;
     background-color: #1e262b !important;
     border-radius: 30px;
     text-align: center;

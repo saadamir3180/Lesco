@@ -96,6 +96,16 @@ const Dashboard = () => {
     },
   ];
 
+  const getStatusColor = (status) =>{
+    if (status == "paid"){
+      return {color:'green'};
+    }
+    else{
+      return {color:'red'};
+    }
+  }
+
+
   const [entries, setEntries] = useState(billEntries);
 
   const handleChangeStatus = (id) => {
@@ -108,6 +118,7 @@ const Dashboard = () => {
 
     setEntries(updatedEntries);
   };
+
 
   const [user, loading] = useAuthState(auth);
 
@@ -289,7 +300,7 @@ const Dashboard = () => {
                               <td class="px-6 py-4">{entry.amount}</td>
                               <td class="px-6 py-4">{entry.id}</td>
                               <td class="px-6 py-4">{entry.dueDate}</td>
-                              <td class="px-6 py-4">{entry.status}</td>
+                              <td class="px-6 py-4 uppercase"  style={getStatusColor(entry.status)} >{entry.status}</td>
                               <td class="px-6 py-4">
                                 <button
                                   onClick={() => handleChangeStatus(entry.id)}
