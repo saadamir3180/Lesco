@@ -49,13 +49,13 @@
     cursor: pointer;
 }
 .navButton{
-    padding: 0.2rem;
+    padding: 0.5rem;
     cursor: pointer;
     font-size: calc(var(--fontSize)/1.4);
     border: var(--border);
-    color: var(--colorDarkBlue);
+    color: var(--colorWhite);
     border-radius: var(--borderRadius);
-    background-color: var(--colorWhite);
+    background-color: #111827;
 }
 .navLink{
     font-size: calc(var(--fontSize)/1.3);

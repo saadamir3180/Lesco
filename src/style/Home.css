@@ -1,0 +1,9 @@
+.CarouselImage{
+    width: 90%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.carouselDiv{
+    height: vh;
+}
