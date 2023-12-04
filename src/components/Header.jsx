@@ -24,7 +24,7 @@ const Header = () => {
             <Link to="/Dashboard">Dashboard</Link>
           </li>
           <li>
-            <Link to="/">Contact Us</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
           {user !== null ? (
             <li>

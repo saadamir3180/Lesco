@@ -217,7 +217,7 @@ const Dashboard = () => {
                       className=" z-40  h-full transition-transform -translate-x-0 "
                       aria-label="Sidebar"
                     >
-                      <div className=" DashBoard h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                      <div className="DashBoard h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
                         <ul className="space-y-2 font-medium">
                           <li>
                             <a

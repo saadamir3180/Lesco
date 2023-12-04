@@ -1,0 +1,27 @@
+.t-center{
+    text-align: center;
+}
+
+.ContactUsPage{
+    color: white;
+    min-height: 50vh;
+}
+
+.ContactLabels{
+    color: #1e262b;
+}
+
+.contactFormFields{
+    background-color: #1e262b;
+    width: 80%;
+}
+
+.sendButton{
+    padding: 10px;
+    width: 15vw;
+    font-size: 14px;
+    border-radius: 20px;
+    color: white;
+    background-color: #1e262b;
+    margin: 5vh;
+}

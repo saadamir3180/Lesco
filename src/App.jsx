@@ -7,6 +7,7 @@ import GetStarted from './pages/GetStarted';
 import User from './pages/User';
 import Dashboard from './pages/Dashboard';
 import NotFound from './pages/NotFound';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path='/' exact element={<Home/>} />
             <Route path='/Dashboard' exact element={<Dashboard/>} />
+            <Route path='/contact' exact element={<ContactUs/>} />
             <Route path='/GetStarted' exact element={<GetStarted/>} />
             <Route path='/user/:email' exact element={<User/>} />
             <Route path='*' exact element={<NotFound/>} />
