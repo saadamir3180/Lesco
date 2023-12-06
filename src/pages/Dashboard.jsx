@@ -209,13 +209,13 @@ const Dashboard = () => {
             <div className="row">
               {user?.email === "saadamir318@gmail.com" ? (
                 <>
-                  <div className="col-md-3">
+                  <div className="col-md-3 p-0">
                     <aside
                       id="sidebar-multi-level-sidebar"
-                      className=" z-40  h-full transition-transform -translate-x-0 "
+                      className=" z-40 w-full transition-transform -translate-x-0 "
                       aria-label="Sidebar"
                     >
-                      <div className="DashBoard h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                      <div className="DashBoard  px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
                         <ul className="space-y-2 font-medium">
                           <li>
                             <a
@@ -241,12 +241,12 @@ const Dashboard = () => {
                           <li>
                             <a
                               href="#"
-                              className="cur flex p-2 mb-3 bottom-0 fixed text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                              className="cur UserName flex p-2 mb-3 bottom-0 fixed text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                             >
                               {user !== null ? (
-                                <span>{user.email}</span>
+                                <span className="mx-auto">{user.email}</span>
                               ) : (
-                                <span>No User</span>
+                                <span className="mx-auto">No User</span>
                               )}
                             </a>
                           </li>
@@ -255,10 +255,10 @@ const Dashboard = () => {
                     </aside>
                   </div>
                   <div className="col-md-9">
+                    <h1 className="pageHeading my-4">
+                      <b>Bill Entries</b>
+                    </h1>
                     <div className="Dialog">
-                      <h1 className="pageHeading my-4">
-                        <b>Bill Entries</b>
-                      </h1>
                       <table className="text-sm text-left rtl:text-right dark:text-gray-400">
                         <thead className="text-xs uppercase">
                           <tr>
@@ -337,13 +337,13 @@ const Dashboard = () => {
                 </>
               ) : (
                 //User
-                <div className="col-md-3">
+                <div className="col-md-3 p-0 ">
                   <aside
                     id="sidebar-multi-level-sidebar"
-                    className=" z-40  h-full transition-transform -translate-x-0 "
+                    className=" z-40 w-full  transition-transform -translate-x-0 "
                     aria-label="Sidebar"
                   >
-                    <div className=" DashBoard h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                    <div className="DashBoard px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
                       <ul className="space-y-2 font-medium">
                         <li>
                           <a
@@ -401,12 +401,12 @@ const Dashboard = () => {
                         <li>
                           <a
                             href="#"
-                            className="cur flex p-2 mb-3 bottom-0 fixed text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                            className="cur flex UserName mb-3 bottom-0 p-2 fixed text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                           >
                             {user !== null ? (
-                              <span>{user.email}</span>
+                              <span className="mx-auto">{user.email}</span>
                             ) : (
-                              <span>No User</span>
+                              <span className="mx-auto">No User</span>
                             )}
                           </a>
                         </li>
@@ -491,7 +491,7 @@ const Dashboard = () => {
                     <div class="w-full m-auto p-8">
                       <div class="paymentForm shadow-lg p-6">
                         <form>
-                        <h2 class="text-lg font-medium mb-6 t-center">
+                          <h2 class="text-lg font-medium mb-6 t-center">
                             Bill Information
                           </h2>
                           <div class="grid grid-cols-2 mb-4 gap-6">
