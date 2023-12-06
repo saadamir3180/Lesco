@@ -44,33 +44,6 @@ const Header = () => {
         </ul>
       </nav>
       <nav className={`headerNavSmallScreen ${isChecked ? 'expanded' : ''}`}>
-        {/* <ul className="navUl">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/Dashboard">Dashboard</Link>
-          </li>
-
-          {user !== null ? (
-            <li>
-              <button
-                className="navButton"
-                onClick={() => {
-                  auth.signOut();
-                }}
-              >
-                SignOut
-              </button>
-            </li>
-          ) : (
-            <li>
-              <Link className="navButton" to={"/GetStarted"}>
-                Get Started
-              </Link>
-            </li>
-          )}
-        </ul> */}
         <label>
           <input type="checkbox"         
           checked={isChecked}
