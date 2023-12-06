@@ -96,17 +96,16 @@ const Dashboard = () => {
     },
   ];
 
-  const getStatusColor = (status) =>{
-    if (status == "paid"){
-      return {color:'green'};
+  const getStatusColor = (status) => {
+    if (status == "paid") {
+      return { color: "green" };
+    } else {
+      return { color: "red" };
     }
-    else{
-      return {color:'red'};
-    }
-  }
+  };
 
   let userId = 1;
- 
+
   const [entries, setEntries] = useState(billEntries);
 
   const handleChangeStatus = (id) => {
@@ -119,7 +118,6 @@ const Dashboard = () => {
 
     setEntries(updatedEntries);
   };
-
 
   const [user, loading] = useAuthState(auth);
 
@@ -258,7 +256,9 @@ const Dashboard = () => {
                   </div>
                   <div className="col-md-9">
                     <div className="Dialog">
-                      <h1 className="pageHeading my-4"><b>Bill Entries</b></h1>
+                      <h1 className="pageHeading my-4">
+                        <b>Bill Entries</b>
+                      </h1>
                       <table className="text-sm text-left rtl:text-right dark:text-gray-400">
                         <thead className="text-xs uppercase">
                           <tr>
@@ -294,11 +294,8 @@ const Dashboard = () => {
                               className="odd:bg-white odd:dark:bg-gray-900  border-b dark:border-gray-700"
                               key={entry.id}
                             >
-                              <th
-                                scope="row"
-                                className="px-3 py-4"
-                              >
-                               {userId++}
+                              <th scope="row" className="px-3 py-4">
+                                {userId++}
                               </th>
                               <td
                                 scope="row"
@@ -306,11 +303,18 @@ const Dashboard = () => {
                               >
                                 {entry.cnic}
                               </td>
-                              <td className="px-3 py-4">{entry.email || "N/A"}</td>
+                              <td className="px-3 py-4">
+                                {entry.email || "N/A"}
+                              </td>
                               <td className="px-3 py-4">{entry.amount}</td>
                               <td className="px-3 py-4">{entry.id}</td>
                               <td className="px-3 py-4">{entry.dueDate}</td>
-                              <td className="px-3 py-4 uppercase"  style={getStatusColor(entry.status)} >{entry.status}</td>
+                              <td
+                                className="px-3 py-4 uppercase"
+                                style={getStatusColor(entry.status)}
+                              >
+                                {entry.status}
+                              </td>
                               <td className="px-3 py-4">
                                 <button
                                   onClick={() => handleChangeStatus(entry.id)}
@@ -320,13 +324,12 @@ const Dashboard = () => {
                               </td>
                             </tr>
                           ))}
-                          
+
                           <tr>
                             <th className="px-6 py-3"></th>
                             <th className="px-6 py-3"></th>
                             <th className="px-6 py-3"></th>
                           </tr>
-                        
                         </tbody>
                       </table>
                     </div>
@@ -445,13 +448,12 @@ const Dashboard = () => {
                             <td className="px-6 py-4">{detail.date}</td>
                           </tr>
                         ))}
-                       
-                          <tr>
-                            <th className="px-6 py-3"></th>
-                            <th className="px-6 py-3"></th>
-                            <th className="px-6 py-3"></th>
-                          </tr>
-                       
+
+                        <tr>
+                          <th className="px-6 py-3"></th>
+                          <th className="px-6 py-3"></th>
+                          <th className="px-6 py-3"></th>
+                        </tr>
                       </tbody>
                     </table>
                     <div className="text-center">
@@ -470,7 +472,7 @@ const Dashboard = () => {
               {payBills ? (
                 <div className="col-md-9">
                   <div className="Dialog mt-4">
-                    <h2>Account Information</h2>
+                    {/* <h2>Account Information</h2>
                     <p>Account Title: Saad Amir</p>
                     <p>Bank Name: Mezzan Bank</p>
                     <p>Account Number: 092001079782726</p>
@@ -484,7 +486,122 @@ const Dashboard = () => {
                       }}
                     >
                       close
-                    </button>
+                    </button> */}
+
+                    <div class="w-full m-auto p-8">
+                      <div class="paymentForm shadow-lg p-6">
+                        <form>
+                        <h2 class="text-lg font-medium mb-6 t-center">
+                            Bill Information
+                          </h2>
+                          <div class="grid grid-cols-2 mb-4 gap-6">
+                            <div class="col-span-2 sm:col-span-1">
+                              <label
+                                for="reg-cnic"
+                                class="block text-sm font-medium mb-2"
+                              >
+                                Registered CNIC
+                              </label>
+                              <input
+                                type="text"
+                                name="reg-cnic"
+                                id="reg-cnic"
+                                placeholder="32XX-XXXXXXX-X"
+                                class="w-full py-3 text-dark px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500"
+                              />
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                              <label
+                                for="bill-id"
+                                class="block text-sm font-medium mb-2"
+                              >
+                                Bill ID
+                              </label>
+                              <input
+                                type="text"
+                                name="bill-id"
+                                id="bill-id"
+                                placeholder="1234"
+                                class="w-full py-3 text-dark px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500"
+                              />
+                            </div>
+                          </div>
+                          <h2 class="text-lg font-medium mb-6 t-center">
+                            Payment Information
+                          </h2>
+                          <div class="grid grid-cols-2 gap-6">
+                            <div class="col-span-2 sm:col-span-1">
+                              <label
+                                for="card-number"
+                                class="block text-sm font-medium mb-2"
+                              >
+                                Card Number
+                              </label>
+                              <input
+                                type="text"
+                                name="card-number"
+                                id="card-number"
+                                placeholder="0000 0000 0000 0000"
+                                class="w-full py-3 text-dark px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500"
+                              />
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                              <label
+                                for="expiration-date"
+                                class="block text-sm font-medium mb-2"
+                              >
+                                Expiration Date
+                              </label>
+                              <input
+                                type="text"
+                                name="expiration-date"
+                                id="expiration-date"
+                                placeholder="MM / YY"
+                                class="w-full text-dark py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500"
+                              />
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                              <label
+                                for="cvv"
+                                class="block text-sm font-medium mb-2"
+                              >
+                                CVV
+                              </label>
+                              <input
+                                type="text"
+                                name="cvv"
+                                id="cvv"
+                                placeholder="000"
+                                class="w-full text-dark py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500"
+                              />
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                              <label
+                                for="card-holder"
+                                class="block text-sm font-medium mb-2"
+                              >
+                                Card Holder
+                              </label>
+                              <input
+                                type="text"
+                                name="card-holder"
+                                id="card-holder"
+                                placeholder="Full Name"
+                                class="w-full text-dark py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500"
+                              />
+                            </div>
+                          </div>
+                          <div class="mt-8 t-center">
+                            <button
+                              type=""
+                              class="CustomButtonPayBill bg-green-500 hover:bg-blue-600 text-white font-medium py-3 rounded-lg focus:outline-none"
+                            >
+                              Pay Bill
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ) : null}
