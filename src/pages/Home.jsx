@@ -66,16 +66,13 @@ const Home = () => {
           <b>Welcome to the Official LESCO Website</b>
         </h1>
         <div className="container-fluid underLine mb-12"></div>
-        <div className="container-fluid mb-20">
+        <div className="container-fluid mb-16">
           <div className="row">
-            {/* Headings */}
-            <div className="col-md-4 homeHeading mb-3 uppercase"><b>Projects</b></div>
-            <div className="col-md-4 homeHeading mb-3 uppercase"><b>News & Media</b></div>
-            <div className="col-md-4 homeHeading mb-3 uppercase"><b>Departments</b></div>
-
+         
             {/* Cards */}
 
-            <div className="col-md-4">
+            <div className="col-md-4 mb-4">
+            <h1 className="homeHeading mb-3 uppercase"><b>Projects</b></h1>
               <a class="card homeCard" href="#">
                 <img
                   src="src/images/card-img1.jpg"
@@ -85,7 +82,8 @@ const Home = () => {
                 
               </a>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 mb-4">
+            <h1 className="homeHeading mb-3 uppercase"><b>News & Media</b></h1>
             <a class="card homeCard" href="#">
                 <img
                   src="src/images/card-img2.jpg"
@@ -95,7 +93,8 @@ const Home = () => {
                 
               </a>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 mb-4">
+            <h1 className="homeHeading mb-3 uppercase"><b>Departments</b></h1>
             <a class="card homeCard" href="#">
                 <img
                   src="src/images/card-img3.jpg"
