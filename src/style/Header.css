@@ -5,12 +5,13 @@
     padding: 1rem 1rem 1rem 2rem;
     font-size: var(--fontSize);
     color: var(--colorWhite);
-    border-radius: calc(var(--borderRadius)*4);
+    /* border-radius: calc(var(--borderRadius)*4); */
     background-color: var(--colorDarkBlue);
-    width: 92%;
+    /* width: 92%; */
+    width: 100%;
     align-self: center;
-    margin-inline: auto;
-    margin-top: 1rem;
+    /* margin-inline: auto; */
+    /* margin-top: 1rem; */
     overflow: hidden;
 }
 .headerNavLargeScreen{

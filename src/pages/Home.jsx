@@ -4,31 +4,31 @@ import "../style/Home.css";
 const Home = () => {
   return (
     <>
-      {/* Carousel
-      <div className="container-fluid carouselDiv mt-4">
+      {/* Carousel */}
+      <div className="container-fluid p-0">
         <div
           id="carouselExample"
-          className="carousel slide mb-4 text-center"
+          className="carousel slide mb-12 text-center"
           data-bs-ride="carousel"
         >
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src="https://scontent.flhe3-2.fna.fbcdn.net/v/t39.30808-6/345873892_1042407030073285_6015048503139143159_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=783fdb&_nc_eui2=AeETPQe78rlb58E_7-xj_rV3CgSd3JQJp5cKBJ3clAmnl34L2ZyDUxk4BPwpNCi7QkA3npKtfqa54nkhMdiNF8tu&_nc_ohc=8ZTK6oEWw_AAX8HrDvW&_nc_ht=scontent.flhe3-2.fna&oh=00_AfDizBc1pZhcOn_SVPXRwi2o2CBhiBRb5ZlNuXKlVVPS1Q&oe=6570DC78"
+                src="src/images/Carousel-img-1.jpg"
                 className="d-block CarouselImage mx-auto"
                 alt="..."
               />
             </div>
             <div className="carousel-item">
               <img
-                src="https://scontent.flhe3-2.fna.fbcdn.net/v/t39.30808-6/345873892_1042407030073285_6015048503139143159_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=783fdb&_nc_eui2=AeETPQe78rlb58E_7-xj_rV3CgSd3JQJp5cKBJ3clAmnl34L2ZyDUxk4BPwpNCi7QkA3npKtfqa54nkhMdiNF8tu&_nc_ohc=8ZTK6oEWw_AAX8HrDvW&_nc_ht=scontent.flhe3-2.fna&oh=00_AfDizBc1pZhcOn_SVPXRwi2o2CBhiBRb5ZlNuXKlVVPS1Q&oe=6570DC78"
+                src="src/images/Carousel-img-2.jpg"
                 className="d-block CarouselImage mx-auto"
                 alt="..."
               />
             </div>
             <div className="carousel-item">
               <img
-                src="https://scontent.flhe3-2.fna.fbcdn.net/v/t39.30808-6/345873892_1042407030073285_6015048503139143159_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=783fdb&_nc_eui2=AeETPQe78rlb58E_7-xj_rV3CgSd3JQJp5cKBJ3clAmnl34L2ZyDUxk4BPwpNCi7QkA3npKtfqa54nkhMdiNF8tu&_nc_ohc=8ZTK6oEWw_AAX8HrDvW&_nc_ht=scontent.flhe3-2.fna&oh=00_AfDizBc1pZhcOn_SVPXRwi2o2CBhiBRb5ZlNuXKlVVPS1Q&oe=6570DC78"
+                src="src/images/Carousel-img-3.jpg"
                 className="d-block CarouselImage mx-auto"
                 alt="..."
               />
@@ -59,9 +59,55 @@ const Home = () => {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-      </div> */}
+      </div>
 
-      <div>Home</div>
+      <div className="container">
+        <h1 className=" mb-3 homeHeading">
+          <b>Welcome to the Official LESCO Website</b>
+        </h1>
+        <div className="container-fluid underLine mb-12"></div>
+        <div className="container-fluid mb-20">
+          <div className="row">
+            {/* Headings */}
+            <div className="col-md-4 homeHeading mb-3 uppercase"><b>Projects</b></div>
+            <div className="col-md-4 homeHeading mb-3 uppercase"><b>News & Media</b></div>
+            <div className="col-md-4 homeHeading mb-3 uppercase"><b>Departments</b></div>
+
+            {/* Cards */}
+
+            <div className="col-md-4">
+              <a class="card homeCard" href="#">
+                <img
+                  src="src/images/card-img1.jpg"
+                  class="mx-auto homeCardImg card-img-top"
+                  alt="..."
+                />
+                
+              </a>
+            </div>
+            <div className="col-md-4">
+            <a class="card homeCard" href="#">
+                <img
+                  src="src/images/card-img2.jpg"
+                  class="mx-auto homeCardImg card-img-top"
+                  alt="..."
+                />
+                
+              </a>
+            </div>
+            <div className="col-md-4">
+            <a class="card homeCard" href="#">
+                <img
+                  src="src/images/card-img3.jpg"
+                  class="mx-auto homeCardImg card-img-top"
+                  alt="..."
+                />
+                
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
