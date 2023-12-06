@@ -5,12 +5,13 @@
     padding: 1rem 1rem 1rem 2rem;
     font-size: var(--fontSize);
     color: var(--colorWhite);
-    border-radius: calc(var(--borderRadius)*4);
+    /* border-radius: calc(var(--borderRadius)*4); */
     background-color: var(--colorDarkBlue);
-    width: 92%;
+    /* width: 92%; */
+    width: 100%;
     align-self: center;
-    margin-inline: auto;
-    margin-top: 1rem;
+    /* margin-inline: auto; */
+    /* margin-top: 1rem; */
     overflow: hidden;
 }
 .headerNavLargeScreen{
@@ -49,13 +50,13 @@
     cursor: pointer;
 }
 .navButton{
-    padding: 0.2rem;
+    padding: 0.5rem;
     cursor: pointer;
     font-size: calc(var(--fontSize)/1.4);
     border: var(--border);
-    color: var(--colorDarkBlue);
+    color: var(--colorWhite);
     border-radius: var(--borderRadius);
-    background-color: var(--colorWhite);
+    background-color: #111827;
 }
 .navLink{
     font-size: calc(var(--fontSize)/1.3);
@@ -68,7 +69,8 @@
 label .menu {
     position: absolute;
     right: 22px;
-    top: 19px;
+    top: 8px;
+    /* top: 19px; */
     width: 50px;
     height: 50px;
     background: var(--colorDarkBlue);

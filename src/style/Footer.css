@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     font-family: var(--textFont);
-    padding: var(--padding);
+    /* padding: var(--padding); */
+    margin-top: 1rem;
     transition: all 0.3s ease;
   }
   .footerBottom{
@@ -23,10 +24,11 @@
   }
   .footerTop{
     display: flex;
-    width: 92%;
+    /* width: 92%; */
+    width: 100%;
     background-color: var(--colorDarkBlue);
     padding: 3rem 1.5rem;
-    border-radius: calc(var(--borderRadius)*2);
+    /* border-radius: calc(var(--borderRadius)*2); */
     justify-content: space-around;
     flex-wrap: wrap;
     gap:1.5rem;
