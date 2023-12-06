@@ -1,5 +1,11 @@
 import "../style/Pages.css";
 import "../style/Home.css";
+import Img1 from '../assets/Carousel-img-1.jpg'
+import Img2 from '../assets/Carousel-img-2.jpg'
+import Img3 from '../assets/Carousel-img-3.jpg'
+import Img4 from '../assets/card-img1.jpg'
+import Img5 from '../assets/card-img2.jpg'
+import Img6 from '../assets/card-img3.jpg'
 
 const Home = () => {
   return (
@@ -14,21 +20,21 @@ const Home = () => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src="src/images/Carousel-img-1.jpg"
+                src={Img1}
                 className="d-block CarouselImage mx-auto"
                 alt="..."
               />
             </div>
             <div className="carousel-item">
               <img
-                src="src/images/Carousel-img-2.jpg"
+                src={Img2}
                 className="d-block CarouselImage mx-auto"
                 alt="..."
               />
             </div>
             <div className="carousel-item">
               <img
-                src="src/images/Carousel-img-3.jpg"
+                src={Img3}
                 className="d-block CarouselImage mx-auto"
                 alt="..."
               />
@@ -75,7 +81,7 @@ const Home = () => {
             <h1 className="homeHeading mb-3 uppercase"><b>Projects</b></h1>
               <a class="card homeCard" href="#">
                 <img
-                  src="src/images/card-img1.jpg"
+                  src={Img4}
                   class="mx-auto homeCardImg card-img-top"
                   alt="..."
                 />
@@ -86,7 +92,7 @@ const Home = () => {
             <h1 className="homeHeading mb-3 uppercase"><b>News & Media</b></h1>
             <a class="card homeCard" href="#">
                 <img
-                  src="src/images/card-img2.jpg"
+                  src={Img5}
                   class="mx-auto homeCardImg card-img-top"
                   alt="..."
                 />
@@ -97,7 +103,7 @@ const Home = () => {
             <h1 className="homeHeading mb-3 uppercase"><b>Departments</b></h1>
             <a class="card homeCard" href="#">
                 <img
-                  src="src/images/card-img3.jpg"
+                  src={Img6}
                   class="mx-auto homeCardImg card-img-top"
                   alt="..."
                 />

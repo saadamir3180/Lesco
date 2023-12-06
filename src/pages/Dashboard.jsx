@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebaseConfig";
-import "../style/Pages.css";
+// import "../style/Pages.css";
 
 const Dashboard = () => {
   const [showTime, setShowTime] = useState(false);
