@@ -13,6 +13,7 @@
   --colorDarkBlue:#1E262B;
   --textFont:'Poppins', sans-serif;
   --designFont:'Philosopher', sans-serif;
+  --minHeight: 70vh;
   font-family: var(--textFont);
   transition: all 0.1s ease;
 }

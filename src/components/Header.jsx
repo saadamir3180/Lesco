@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "../style/Header.css";
 import { auth } from "../firebaseConfig";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Lesco from "./Lesco";
 const Header = () => {
+  const navigate = useNavigate();
   const [user, loading] = useAuthState(auth);  
   const [isChecked, setIsChecked] = useState(false);
 
@@ -32,6 +33,7 @@ const Header = () => {
                 className="navButton"
                 onClick={() => {
                   auth.signOut();
+                  navigate('/');
                 }}
               >
                 Sign Out
@@ -67,6 +69,7 @@ const Header = () => {
                 className="navButton"
                 onClick={() => {
                   auth.signOut();
+                  navigate('/');
                   handleCheckboxChange();
                 }}
               >
