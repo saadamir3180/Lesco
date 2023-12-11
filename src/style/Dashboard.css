@@ -11,7 +11,7 @@
     gap: 1rem;
     width: 20%;
     min-width: 20vw;
-    height: calc(var(--minHeight)/1.05);
+    min-height: calc(var(--minHeight)/1.05);
     background-color: var(--colorDarkBlue);
     padding-block: 3rem ;
     padding-inline: 1.75rem;
@@ -26,10 +26,16 @@
     border-radius: var(--borderRadius);
     background-color: var(--colorLightBlue);
     align-items: center;
-    justify-content:space-around;
+    justify-content:center;
     gap: 1.5rem;
 }
-.button{    
+.paymentDialog{
+padding-block: 2rem;
+display: flex;
+flex-direction: row;
+
+}
+.buttonDashboard{    
     padding: 0.1rem;
     cursor: pointer;
     width: 140%;

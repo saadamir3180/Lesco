@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { createUserWithEmailAndPassword }  from 'firebase/auth'
-import { auth } from '../firebaseConfig'
-import '../style/Login.css'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import {
+  createUserWithEmailAndPassword,
+  updateProfile,
+} from 'firebase/auth';
+import { auth } from '../firebaseConfig';
+import '../style/Login.css';
 
 
 const SignUp = () => {
@@ -11,31 +14,39 @@ const SignUp = () => {
   const navigate = useNavigate()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [cnic, setCnic] = useState('')
 
-  const registerUser = (e) => {
+  const registerUser = async (e) => {
     e.preventDefault()
-    createUserWithEmailAndPassword(auth, username, password)
-    .then(() => {
+    const userCredential = await createUserWithEmailAndPassword(auth, username, password)
+    .then(() => { 
+      updateProfile(userCredential.user, {
+      displayName: username,
+      cnic: cnic,
+    });
       navigate(`/user/${auth.currentUser.email}`)
+      
     })
     .catch((error) => {
       console.log(error.code, error.message)
     })
     setUsername('')
     setPassword('')
+    setCnic('')
   }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+
   return (
     <form className='signupForm' onSubmit={registerUser} >
     <h2 className="text-center">Sign Up Now</h2>
     <div className='inputsContainer'>
-    {/* <div className="input-container">
-      <input type="text" required onChange={nameHandler} value={name}/>
-      <label className='label-n'>Name</label>
-    </div> */}
     <div className="input-container">
       <input type="text" required onChange={(e)=>{setUsername(e.target.value)}} value={username} aria-label='username' autoComplete="username"/>
       <label className='label-n'>Email</label>
+    </div>
+
+    <div className="input-container">
+      <input type="number" required onChange={(e)=>{setCnic(e.target.value)}} value={cnic} />
+      <label className='label-n'>CNIC</label>
     </div>
     <div className="input-container">
       <input type="password" required onChange={(e)=>{setPassword(e.target.value)}} value={password} 
@@ -44,10 +55,6 @@ const SignUp = () => {
       <label className='label-n'>Password
       </label>
     </div>
-    {/* <div className="input-container">
-      <input type="name" required onChange={companyNameHandler} value={companyName} />
-      <label className='label-n'>Company Name</label>
-    </div> */}
     <div className="inputCheckboxContainer">
       <input type="checkbox" required />
       <label className='forCheckBox'>I've read and agreed to the Terms of Use, Privacy Notice and Other Details</label>

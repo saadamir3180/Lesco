@@ -1,0 +1,140 @@
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: var(--colorLightGreen);
+    color: var(--colorWhite);
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: var(--colorDarkGreen);
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--colorDarkGreen);
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+
+
+
+
+
+
+
+
+
+
+.mainscreen
+{
+	display: flex;
+    flex-direction: column;
+    color:var(--colorWhite);
+}
+
+.card {
+	width: 35rem;
+    box-shadow: 4px 3px 20px #3535358c;
+    display:flex;
+    flex-direction: row;
+    
+}
+
+
+.rightside {
+    background-color: var(--colorDarkBlue);
+	width: 35rem;
+    border-radius: var(--borderRadius);
+    padding: 1rem 2rem 3rem 3rem;
+}
+
+p{
+    display:block;
+    margin: .8rem 0;
+}
+
+.inputbox
+{
+    color:var(--colorWhite);
+    background-color: var(--colorLightBlue);
+	width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1.5px solid #ccc;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    color: var(--colorBlack);
+    font-size: 1.1rem;
+    font-weight: 500;
+    outline:none;
+}
+
+.expcvv {
+    display:flex;
+    justify-content: space-between;
+    padding-top: 0.6rem;
+}
+
+.expcvv_text{
+    padding-right: 1rem;
+}
+.expcvv_text2{
+    padding:0 1rem;
+}
+
+.buttonForm{
+    background-color: var(--colorDarkGreen);
+    border: none;
+    border-radius: var(--borderRadius);
+    color: var(--colorWhite);
+    width:100%;
+    padding-block:2%;
+    outline:none;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .card{
+        flex-direction: column;
+        width: auto;
+      
+    }
+
+    .rightside{
+        width:auto;
+        border-bottom-left-radius: 1.5rem;
+        padding:0.5rem 3rem 3rem 2rem;
+        border-radius:0;
+    }
+}
+
+
+.billDetails{
+    width: 50%;
+    background-color: var(--colorDarkBlue);
+    height: 100%;
+    border-radius: var(--borderRadius);
+    padding: var(--padding);
+}

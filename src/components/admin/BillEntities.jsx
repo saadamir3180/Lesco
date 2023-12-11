@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import GetBills from './GetBills';
 const BillEntities = () => {
 
 
@@ -99,37 +99,38 @@ const BillEntities = () => {
       };
 
   return (
-    <div className="Dialog">    
-            <h2>Bill Entries</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>User CNIC</th>
-                  <th>User Email</th>
-                  <th>Bill Amount</th>
-                  <th>Bill ID</th>
-                  <th>Due Date</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {entries.map((entry) => (
-                  <tr key={entry.id}>
-                    <td>{entry.cnic}</td>
-                    <td>{entry.email || 'N/A'}</td>
-                    <td>{entry.amount}</td>
-                    <td>{entry.id}</td>
-                    <td>{entry.dueDate}</td>
-                    <td>{entry.status}</td>
-                    <td>
-                      <button onClick={() => handleChangeStatus(entry.id)}>Change Status</button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+    <GetBills/>
+    // <div className="Dialog">    
+    //         <h2>Bill Entries</h2>
+    //         <table>
+    //           <thead>
+    //             <tr>
+    //               <th>User CNIC</th>
+    //               <th>User Email</th>
+    //               <th>Bill Amount</th>
+    //               <th>Bill ID</th>
+    //               <th>Due Date</th>
+    //               <th>Status</th>
+    //               <th>Action</th>
+    //             </tr>
+    //           </thead>
+    //           <tbody>
+    //             {entries.map((entry) => (
+    //               <tr key={entry.id}>
+    //                 <td>{entry.cnic}</td>
+    //                 <td>{entry.email || 'N/A'}</td>
+    //                 <td>{entry.amount}</td>
+    //                 <td>{entry.id}</td>
+    //                 <td>{entry.dueDate}</td>
+    //                 <td>{entry.status}</td>
+    //                 <td>
+    //                   <button onClick={() => handleChangeStatus(entry.id)}>Change Status</button>
+    //                 </td>
+    //               </tr>
+    //             ))}
+    //           </tbody>
+    //         </table>
+    //       </div>
   )
 }
 

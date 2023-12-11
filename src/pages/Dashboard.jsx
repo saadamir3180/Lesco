@@ -63,7 +63,7 @@ const Dashboard = () => {
               </li>
               <li>
                 <button
-                  className="button"
+                  className="buttonDashboard"
                   onClick={() => {setAdminDefault();{
                     user !== null ? setShowBills(!showBills) : null;
                   }}}
@@ -73,22 +73,22 @@ const Dashboard = () => {
               </li>
               <li>
                 <button
-                  className="button"
+                  className="buttonDashboard"
                   onClick={() => {setAdminDefault();{
                     user !== null ? setBadDebt(!badDebt) : null;
                   }}}
                 >
-                  Show Bad Debt
+                  Bad Debt
                 </button>
               </li>
               <li>
                 <button
-                  className="button"
+                  className="buttonDashboard"
                   onClick={() => {setAdminDefault();{
                     user !== null ? setRevenue(!revenue) : null;
                   }}}
                 >
-                  Show Revenue
+                  Net Revenue
                 </button>
               </li>
             </ul>
@@ -103,7 +103,7 @@ const Dashboard = () => {
               )}
               <li>
                 <button
-                  className="button"
+                  className="buttonDashboard"
                   onClick={() => {setUserDefault();{
                     setShowTime(!showTime);
                   }}}
@@ -113,7 +113,7 @@ const Dashboard = () => {
               </li>
               <li>
                 <button
-                  className="button"
+                  className="buttonDashboard"
                   onClick={() => {setUserDefault();{
                     user !== null
                       ? setRequestInstallments(!requestInstallments)
@@ -125,7 +125,7 @@ const Dashboard = () => {
               </li>
               <li>
                 <button
-                  className="button"
+                  className="buttonDashboard"
                   onClick={() => {setUserDefault();{
                     user !== null ? setBillEstimation(!billEstimation) : null;
                   }}}
@@ -135,7 +135,7 @@ const Dashboard = () => {
               </li>
               <li>
                 <button
-                  className="button"
+                  className="buttonDashboard"
                   onClick={() => {setUserDefault();{
                     user !== null ? setPayBills(!payBills) : null;
                   }}}

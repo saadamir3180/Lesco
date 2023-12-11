@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 import { collection, onSnapshot, query, orderBy, limit, updateDoc, doc } from "firebase/firestore";
 import '../../style/Admin.css';
-
 import { dataBase } from "../../firebaseConfig";
 
-const Revenue = () => {
+const GetBills = () => {
   const ENTITY = 'bills';
   const [bills, setBills] = useState([]);
   const billsRef = collection(dataBase, ENTITY);
-  let money = 0;
-  const [netRevenue, setNetRevenue] = useState(0);
 
   useEffect(() => {
     try {
@@ -18,16 +15,10 @@ const Revenue = () => {
       );
       const unsubscribe = onSnapshot(queryRef, (snapshot) => {
         let bills = [];
-        money = 0;
         snapshot.forEach((doc) => {
           bills.push(
             { ...doc.data(), id: doc.id }
           );
-          bills.forEach(value => {
-            money += ((doc.data().amountPayed))/2;
-          });
-          
-          setNetRevenue(money)
         });
         setBills(bills);
       });
@@ -71,6 +62,8 @@ const Revenue = () => {
             <th>Bill Amount</th>
             <th>Bill ID</th>
             <th>Due Date</th>
+            <th>Date Subbmit</th>
+            <th>Late</th>
             <th>Amount Payed</th>
             <th>Status</th>
             <th>Action</th>
@@ -83,19 +76,19 @@ const Revenue = () => {
               <td>{bill.amount || 'N/A'}</td>
               <td>{bill.id}</td>
               <td>{bill.dueDate ? new Date(bill.dueDate.seconds * 1000).toLocaleDateString() : 'N/A'}</td>
+              <td>{bill.dateSubbmit ? new Date(bill.dateSubbmit.seconds * 1000).toLocaleDateString() : 'N/A'}</td>
+              <td>{bill.late ? 'true' : 'false'}</td>
               <td>{bill.amountPayed && bill.status ? bill.amountPayed : '0'}</td>
               <td>{bill.status ? 'paid' : 'unpaid'}</td>
               <td>
-                <button onClick={() => handleChangeStatus(bill.id)}>Change Status</button>
+                <button onClick={() => {!bill.status ? handleChangeStatus(bill.id): null}}>Change Status</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
- 
-      <h3>Total Revenue: {netRevenue}</h3>
     </div>
   );
-}
+};
 
-export default Revenue
+export default GetBills;

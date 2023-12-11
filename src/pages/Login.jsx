@@ -17,7 +17,7 @@ const Login = () => {
     .then(()=>{
       setUsername('')
       setPassword('')
-      navigate(`/user/${auth.currentUser.email}`)
+      navigate(`/user/dashboard`)
     })
     .catch((error)=>{
       console.log(error)
