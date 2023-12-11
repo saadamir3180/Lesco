@@ -24,7 +24,7 @@ const SignUp = () => {
       displayName: username,
       cnic: cnic,
     });
-      navigate(`/user/${auth.currentUser.email}`)
+      navigate(`/dashboard`)
       
     })
     .catch((error) => {

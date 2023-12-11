@@ -1,7 +1,8 @@
 .CarouselImage{
     width: 100%;
     object-fit: cover;
-    height: 82vh;
+    height: 92vh;
+    overflow: hidden;
 }
 
 
@@ -31,4 +32,10 @@
 
 }
 
-
+.card{
+    width: 0%;
+    background-color: transparent;
+}
+.container-fluid{
+    overflow: hidden;
+}

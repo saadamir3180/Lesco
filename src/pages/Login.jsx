@@ -17,7 +17,7 @@ const Login = () => {
     .then(()=>{
       setUsername('')
       setPassword('')
-      navigate(`/user/dashboard`)
+      navigate(`/dashboard`)
     })
     .catch((error)=>{
       console.log(error)

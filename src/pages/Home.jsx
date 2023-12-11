@@ -88,7 +88,7 @@ const Home = () => {
                 
               </a>
             </div>
-            <div className="col-md-4 mb-4">
+            <div className="col-md-4">
             <h1 className="homeHeading mb-3 uppercase"><b>News & Media</b></h1>
             <a class="card homeCard" href="#">
                 <img
