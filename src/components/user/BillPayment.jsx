@@ -6,12 +6,13 @@ const BillPayment = () => {
     const [ cardNumber, setCardNumber ] = useState('')
     const [ amount, setAmount ] = useState('')
     const [ cvv, setCvv ] = useState('')
+    const [ paid, setpaid ] = useState(false)
   return (
     <div className="Dialog paymentDialog">
-        <div className='billDetails'></div>
+        <div className='billDetails'>{paid ? <p>Your bill has been submiited</p> : null}</div>
       <div className="mainscreen">
           <div className="rightside">
-            <form onSubmit={(e)=>{e.preventDefault();setName(''), setCardNumber(''), setAmount(''), setCvv('')}}>
+            <form onSubmit={(e)=>{e.preventDefault();setName(''), setCardNumber(''), setAmount(''), setCvv(''), setpaid(true)}}>
               <h1>Pay Bill here</h1>
               <h2>Payment Information</h2>
               <p>Connection Owner</p>
@@ -66,7 +67,7 @@ const BillPayment = () => {
               </div>
               <p></p>
               <button type="submit" className="buttonForm">
-                CheckOut
+                Pay now
               </button>
             </form>
           </div>

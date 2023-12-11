@@ -10,7 +10,25 @@ const BillEstimation = () => {
 
   const calculateEstimation = () => {
     if (unit.trim() !== '' && !isNaN(unit)) {
-      const estimation = parseFloat(unit) * 20;
+    let estimation =0
+      if(unit<=100 && unit>= 0){
+        estimation = parseFloat(unit) * 15;
+      }
+      else if(unit<=200 && unit > 100){
+        estimation = parseFloat(unit) * 20;
+      }
+      else if(unit<=300 && unit> 200){
+        estimation = parseFloat(unit) * 25;
+      }
+          else if(unit<=400 && unit> 300){
+            estimation = parseFloat(unit) * 40;
+          }
+            else if(unit<=500 && unit> 400){
+              estimation = parseFloat(unit) * 50;
+            }
+            else if(unit>500){
+              estimation = parseFloat(unit) * 55;
+            }
       setResult(estimation.toFixed(2)); // Rounded to two decimal places
     } else {
       setResult(null);
